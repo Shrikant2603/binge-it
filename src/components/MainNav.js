@@ -8,6 +8,7 @@ import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Paper } from '@mui/material';
+import zIndex from '@mui/material/styles/zIndex';
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
@@ -26,7 +27,7 @@ export default function SimpleBottomNavigation() {
   }, [value, navigate]);
 
   return (
-    <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+    <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex:100 }} elevation={3}>
       <BottomNavigation
        className='my-class'
         showLabels

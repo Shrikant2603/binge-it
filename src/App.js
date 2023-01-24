@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SimpleBottomNavigation from './components/MainNav';
 import { Container } from '@mui/material';
-import Trending from './pages/series/Trending';
+import Trending from './pages/trending/Trending';
 import Movies from './pages/movies/Movies';
 import Series from './pages/series/Series';
 import Search from './pages/search/Search';
