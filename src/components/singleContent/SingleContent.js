@@ -1,6 +1,7 @@
 import { Badge } from '@mui/material';
 import React from 'react'
 import { img_300, unavailable } from "../../config/config";
+import ContentModal from '../contentModal/ContentModal';
 import "./SingleContent.css";
 
 const SingleContent = ({
@@ -11,8 +12,15 @@ const SingleContent = ({
   media_type,
   vote_average,
 }) => {
+  let dateGB = new Date(date);
+  let formattedDate = dateGB.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+  });
+
   return (
-    <div className='media'>
+    <ContentModal media_type={media_type} id={id}>
       <Badge
       
         badgeContent={vote_average?vote_average.toFixed(1):"N/A"}
@@ -26,9 +34,9 @@ const SingleContent = ({
       <b className="title">{title}</b>
       <span className="subTitle">
         {media_type === "tv" ? "TV Series" : "Movie"}
-        <span className="subTitle">{date}</span>
+        <span className="subTitle">{formattedDate}</span>
       </span>
-    </div>
+    </ContentModal>
   )
 }
 
