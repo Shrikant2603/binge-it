@@ -1,13 +1,12 @@
 .header {
     width: 100%;
-    cursor: pointer;
     position: fixed;
     display: flex;
-    justify-content: center;
-    background-color: #01083f;
+    justify-content: left;
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     font-family: 'Poppins', sans-serif;
     font-size: 5vw;
-    padding-bottom: 15px;
+    padding: 15px 0 15px 15px;
     box-shadow: 0px 1px 5px rgb(156, 182, 251);
     color: white;
     z-index: 100;
@@ -16,6 +15,25 @@
   @media (max-width: 1000px) {
     .header {
       padding-top: 15px;
-      font-size: 6.4vw;
     }
   }
+.logo{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  height: auto;
+  width: 10%;
+  height: auto;
+  
+}
+@media screen and (max-width: 992px) {
+  .logo{
+    width: 20%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .logo{
+    width: 30%;
+  }
+}

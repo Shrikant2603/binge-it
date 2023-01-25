@@ -8,7 +8,6 @@ import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Paper } from '@mui/material';
-import zIndex from '@mui/material/styles/zIndex';
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
